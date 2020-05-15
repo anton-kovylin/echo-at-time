@@ -9,7 +9,7 @@ Go to project folder `cd echo-at-time/`
 
 **Build Api:** `docker-compose -f docker/docker-compose-dev.yml up --build`
 
-*Note:* solution based on the rule use only redis.io, so no RabbitMQ or other messaging broker were added.
+*Note:* solution based on the rule `use only redis.io`, so no RabbitMQ or other messaging broker were added.
 
 **API path:** `localhost:45000/api/echoAtTime`
 
