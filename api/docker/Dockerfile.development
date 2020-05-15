@@ -1,0 +1,12 @@
+FROM node:latest
+
+RUN mkdir /srv/echo-at-time
+WORKDIR /srv/echo-at-time
+
+ADD package.json /srv/echo-at-time/
+RUN npm install
+
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
+CMD /wait && node api.js
