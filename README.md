@@ -17,15 +17,7 @@ Params:
 - message
 - timestamp
 
-**Server log example cases:**
-
-- When received timestamp is lower than current date
+**Server log example:**
 ```
-Message "some message" should be shown: true (1579529416014 vs 1589529416014)
-== YOOHOO the message: "weedfd" was shown!!! ==
-```
-
-- When received timestamp is lower than current date
-```
-Message "some message" should be shown: false (1589539416014 vs 1589529616288)
+== YOOHOO the message: "somemessage" was shown!!! ==
 ```
