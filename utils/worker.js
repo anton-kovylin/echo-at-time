@@ -28,8 +28,6 @@ class Worker {
         groupedJobsData.forEach(item => {
           const [message, timestamp] = item;
 
-          console.log(`Message "${message}" should be shown: ${Number(timestamp) <= Date.now()} (${timestamp} vs ${Date.now()})`);
-
           if (Number(timestamp) <= Date.now()) {
             handler(message);
             this.redisClient.zremAsync([jobName, message]);
